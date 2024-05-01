@@ -1,0 +1,423 @@
+:root {
+    --dark-color: #252525;
+    --light-color: white;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55vw;
+    height: 100vh;
+    /* background-color: red; */
+    align-self: center;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.dark-mode {
+    background-color: var(--dark-color);
+}
+
+.light-mode {
+    background-color: var(--light-color);
+}
+
+.light-mode h3 {
+    color: var(--dark-color);
+}
+
+.dark-mode h3 {
+    color: var(--light-color);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 15%;
+    /* background-color: palevioletred; */
+    width: 100%;
+}
+
+main {
+    display: flex;
+    height: 65%;
+    /* background-color: paleturquoise; */
+    width: 100%;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    /* background-color: grey; */
+}
+
+footer {}
+
+.searchBar {
+    background-color: transparent;
+    border: 1px solid #6C63FF;
+    width: 80%;
+    border-radius: 5px;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.searchBar-dark {
+    background-color: #252525;
+    border: 1px solid white;
+}
+
+
+
+.searchBar input {
+    border: none;
+    background-color: transparent;
+}
+
+.searchBar input[type="search"]::placeholder {
+    color: C3C1E5;
+    /* Placeholder text color for modern browsers */
+}
+
+.section-heading {
+    text-align: center;
+}
+
+.section-heading h1 {
+    font-size: 2rem;
+}
+
+.mode-selection {
+    background-color: #6C63FF;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.section-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    gap: 15px;
+}
+
+.section-wrapper select {
+    background-color: #6C63FF;
+    color: white;
+    height: 2rem;
+    border-radius: 5px;
+    border: none;
+    width: 60px;
+}
+
+
+hr {
+    background-color: #6C63FF;
+    width: 100%;
+    height: 1px;
+    border: none;
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid red; */
+}
+
+.todo-list-section {
+    /* border: 1px solid #da0496; */
+    height: 100%;
+    width: 70%;
+}
+
+.note {
+    display: flex;
+    justify-content: space-between;
+    /* Distribute items evenly */
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+
+.note .left {
+    display: flex;
+    align-items: center;
+}
+
+.note .right {
+    display: flex;
+    align-items: center;
+}
+
+.note input[type="checkbox"],
+.note h3 {
+    margin-right: 10px;
+    /* Add spacing between checkbox/h3 and images */
+}
+
+.addNote-wrapper {
+    background-color: #6C63FF;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    /* Change to fixed positioning */
+    bottom: 5%;
+    /* Position 5% from the bottom of the viewport */
+    right: 23.5%;
+    /* Position 5% from the right of the viewport */
+}
+
+.left input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #6C63FF;
+}
+
+.note .right img {
+    padding: 0 5px 0 5px;
+
+}
+
+input[type='checkbox'] {
+    accent-color: #6C63FF;
+}
+
+/* Style the checkbox border on hover */
+input[type="checkbox"]:hover {
+    border-color: red;
+    /* Border color on hover */
+}
+
+/* Style the checkbox border when focused */
+input[type="checkbox"]:focus {
+    border-color: green;
+    /* Border color when focused */
+}
+
+/* Style the checkbox border when checked */
+.note .left input[type="checkbox"]:checked {
+    border-color: orange;
+    /* Border color when checked */
+}
+
+.note-category:hover,
+.mode-selection:hover,
+.addNote-wrapper:hover {
+    background-color: #534CC2;
+}
+
+.strike-through {
+    text-decoration: line-through;
+    color: #252525 !important;
+    opacity: 50%;
+}
+
+.modal {
+    border: 1px solid #6C63FF;
+    background-color: white;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 45%;
+    width: 40%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.modal-button {
+    background-color: #6C63FF;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    height: 2.5rem;
+    width: 6rem;
+}
+
+.modal-button:nth-child(1) {
+    background-color: white;
+    color: #6C63FF;
+    border: 1px solid #6C63FF;
+}
+
+.modal-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 90%;
+    height: 100%;
+}
+
+.modal-button-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modal-subject, .modal-title {
+    border: 1px solid #6C63FF;
+    border-radius: 5px; 
+    height: 2.5rem;
+    padding-left: 1rem;
+    /* padding-top: -2rem; */
+}
+
+.modal-title:focus,
+.modal-subject:focus {
+    border: 1px solid #6C63FF; /* Border color */
+    box-shadow: 0 0 3px 2px rgba(108, 99, 255, 0.5); /* Outer glow with 1px spread and 2px blur */
+    outline: none; /* Remove default focus outline */
+}
+
+
+.modal-subject {
+    border: 1px solid #6C63FF;
+    border-radius: 5px; 
+    height: 6rem;
+    padding-left: 1rem;
+    padding-top: 1rem; /* Adjust as needed to align with placeholder */
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Grey with 50% opacity */
+    z-index: 999; /* Ensure the overlay is above other elements */
+}
+
+.rotate {
+    transform: rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.rotate-back {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease; 
+}
+
+.edit-wrapper, .delete-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    width: 1.5rem;
+}
+
+.edit-icon-hovered path {
+    stroke: #6C63FF; /* Change to the desired color */
+    transition: stroke 0.3s ease; /* Optional: Add transition effect */
+  }
+
+  .delete-icon-hovered path {
+    stroke: red; /* Change to the desired color */
+    transition: stroke 0.3s ease; /* Optional: Add transition effect */
+  }
+
+
+.spin {
+    animation: spin 0.4s linear; /* Set the animation duration to 0.5 seconds */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.drop {
+    animation: drop 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Add dropping animation */
+}
+
+@keyframes drop {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.empty-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark-mode h3 {
+    color: var(--light-color);
+}
+
+.dark-mode .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(37, 37, 37, 0.7) ;/* Grey with 50% opacity */
+    z-index: 999; /* Ensure the overlay is above other elements */
+}
+
+.dark-mode .modal {
+    background-color: rgba(37, 37, 37, 1);
+    border: 1px solid white;
+}
+
+.dark-mode h1 {
+    color: white;
+}
+
+.dark-mode .modal-title, .dark-mode .modal-subject, .dark-mode .modal-button:nth-child(1)  {
+    background-color: rgba(37, 37, 37, 1);
+    /* Placeholder text color for modern browsers */
+}
+
+.search-input {
+    border: none;
+    width: 95.5%;
+    height: 100%;
+    border: none;
+    outline: none;
+}
+
+
+
+
